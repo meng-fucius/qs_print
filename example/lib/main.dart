@@ -78,7 +78,7 @@ class _HomeState extends State<Home> {
                 .map(
                   (e) => GestureDetector(
                     onTap: () async {
-                      await QsPrint.connectDevice(e.address);
+                      await QsPrint.connect(e.address);
                       Navigator.push(
                         context,
                         MaterialPageRoute(

@@ -27,7 +27,7 @@ class QsPrint {
         .toList();
   }
 
-  static Future connectDevice(String address) async {
+  static Future connect(String address) async {
     final result =
         await _channel.invokeMethod('connectDevice', {'address': address});
     return result;

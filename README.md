@@ -2,14 +2,43 @@
 
 A new flutter plugin project.
 
-## Getting Started
+群索热敏打印机插件，适用型号：5801/5803/5806/8001
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+##初始化
+建议在app启动时进行初始化以便后续连接打印机等操作
+```dart
+    QsPrint.init();
+```
+##扫描设备并连接
+运行以下语句
+```dart
+    QsPrint.getDevices();
+    QsPrint.connect(address);
+```
+getDevices 得到包含设备名称和地址的数组
+##设置黑标
+开始打印前请先开启黑标检测，否则会走纸多张
+黑标只需设置一次，如果执行了设备初始化指令，需要再次设置黑标
+###开启黑标
+```dart
+    QsPrint.openBlackMark();
+```
+###设置参数
+```dart
+    QsPrint.setBlackMark(height: 50, width: 50, start: 50, voltage: 2000)
+```
+heigth:黑标高度
+width:黑标宽度
+start:检测到黑标后，起始走纸距离
+voltage:黑标检测参考电压
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##打印安速面单
+模板固定，暂不支持自定义
+```dart
+    QsPrint.printAsOrder();
+```
 
+##断开连接
+```dart
+    QsPrint.disconnect();
+```

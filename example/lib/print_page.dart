@@ -41,10 +41,18 @@ class _PrintPageState extends State<PrintPage> {
             ),
             TextButton(
               onPressed: () {
-                QsPrint.setBlackMark(
-                    height: 50, width: 50, start: 50, voltage: 2000);
+                QsPrint.closeBlackMark();
               },
-              child: const Text('设置黑标'),
+              child: const Text('关闭黑标检测'),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextButton(
+              onPressed: () {
+                QsPrint.resetPrint();
+              },
+              child: const Text('初始化打印机'),
             ),
             const SizedBox(
               height: 10,

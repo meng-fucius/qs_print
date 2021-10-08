@@ -37,7 +37,19 @@ voltage:黑标检测参考电压
 ```dart
     QsPrint.printAsOrder();
 ```
-
+##链接状态
+```dart
+    QsPrint.getStatus();
+```
+0：未连接
+1：监听中
+2：连接中
+3：已连接
+4：丢失连接
+5：连接失败
+6：连接成功
+7：扫描中
+8：扫描结束
 ##断开连接
 ```dart
     QsPrint.disconnect();

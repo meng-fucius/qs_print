@@ -35,7 +35,7 @@ android {
 }
 
 dependencies {
-    implementation files('libs/core.jar')
+    implementation files('libs/core.jar'){exclude group: 'com.google.zxing'}
     implementation files('libs/qsprintersdk.jar')
     implementation files('libs/usbsdk.jar')
     implementation 'com.google.code.gson:gson:2.8.0'

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="qsprintersdk">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/android/libs/qsprintersdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
